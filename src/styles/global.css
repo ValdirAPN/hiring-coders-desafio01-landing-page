@@ -1,0 +1,47 @@
+:root {
+  --black: #030303;
+  --gray: #ECECEC;
+  --gold: #938656;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body, input, button {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+
+  color: var(--black);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b613c;
+}
