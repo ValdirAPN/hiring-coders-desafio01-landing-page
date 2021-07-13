@@ -15,6 +15,8 @@ export const Container = styled.div`
 `
 
 export const Timer = styled.div`
+  max-width: 500px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
