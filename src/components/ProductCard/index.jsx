@@ -1,16 +1,16 @@
 import * as S from './styled';
 
-export function ProductCard({ title, productImage }) {
+export function ProductCard({ title, productImage, oldPrice, newPrice }) {
   return (
     <S.Card>
       <img src={productImage} alt="" />
       <S.Content>
         <h3>{title}</h3>
         <span className="oldPrice">
-          R$ 359,00
+          R$ {oldPrice}
         </span>
         <span className="newPrice">
-          R$ 199,00
+          R$ {newPrice}
         </span>
       </S.Content>
     </S.Card>
