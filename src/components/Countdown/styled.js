@@ -15,10 +15,9 @@ export const Container = styled.div`
 `
 
 export const Timer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
 
   margin-bottom: 1rem;
 

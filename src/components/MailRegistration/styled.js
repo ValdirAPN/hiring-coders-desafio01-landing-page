@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const EmailInput = styled.input`
-  width: 300px;
+  width: calc(min(300px, 40vw));
   height: 3rem;
   padding: 0 1rem;
   background: var(--gray);

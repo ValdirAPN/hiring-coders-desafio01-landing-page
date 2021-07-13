@@ -15,4 +15,10 @@ export const Wrapper = styled.section`
     font-weight: 400;
     color: var(--gold);
   }
+
+  @media(max-width: 680px) {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 6rem 0;
+  }
 `
