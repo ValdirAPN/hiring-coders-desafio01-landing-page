@@ -3,4 +3,7 @@
 Projeto desenvolvido para o Hirin Coders. O conceito do desafio é criar uma landing page que captura o e-mail do usuário para o envio de ofertas da Black Friday. A página captura o e-mail digitado no campo de input e salva no LocalStorage.
 
 [Chateawx Landing Page](https://hc-desafio1-vpn.netlify.app/)
-![Landing page overview](/public/chateawx.png?raw=true)
+
+![Landing page overview](/public/chateawx1.png?raw=true)
+
+![Landing page overview](/public/chateawx2.png?raw=true)
