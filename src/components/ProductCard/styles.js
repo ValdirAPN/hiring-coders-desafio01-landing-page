@@ -5,7 +5,7 @@ export const Card = styled.div`
 
   img {
     width: 100%;
-    height: 500px;
+    height: 380px;
     object-fit: cover;
   }
 `
@@ -26,12 +26,26 @@ export const Content = styled.div`
 
   .oldPrice {
     text-decoration: line-through;
+    margin-right: 1rem;
   }
 
   .newPrice {
     background: var(--gold);
     color: var(--gray);
-    margin-left: 1rem;
     padding: 0 0.5rem;
+  }
+
+  button {
+    background: var(--black);
+    color: var(--gray);
+    border: 0;
+
+    height: 50px;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 1rem;
   }
 `

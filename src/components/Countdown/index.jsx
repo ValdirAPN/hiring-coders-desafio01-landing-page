@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MailRegistration } from '../../components/MailRegistration';
 
-import * as S from './styled'
+import * as S from './styles'
 
 export function Countdown() {
   const [timeLeft, setTimeLeft] = useState({});

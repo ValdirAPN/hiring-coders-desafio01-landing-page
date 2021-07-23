@@ -1,19 +1,48 @@
-import { Navbar } from '../../components/Navbar';
-import { Hero } from '../../components/Hero';
-import { Countdown } from '../../components/Countdown';
-import { Footer } from '../../components/Footer';
+import { useState } from 'react';
 
-import * as S from './styled';
-import { ProductsOnSale } from '../../components/ProductsOnSale';
+import { products } from '../../service/db';
+
+import { BlackFridayMoldal } from '../../components/BlackFridayModal';
+import { ProductCard } from '../../components/ProductCard';
+
+import * as S from './styles';
+import { Hero } from '../../components/Hero';
 
 export function Home() {
+  const [isBlackFridayModalOpen, setIsBlackFridayModalOpen] = useState(true);
+
+  function handleCloseBlackFridayModal() {
+    setIsBlackFridayModalOpen(false);
+  }
   return (
-    <S.Container>
-      <Navbar />
-      <Hero />
-      <ProductsOnSale />
-      <Countdown />
-      <Footer />
-    </S.Container>
+    <>
+      <S.Container>
+
+        <Hero />
+
+        <S.Products>
+
+          {
+            products.map(({ id, name, oldPrice, price, imageUrl }) => {
+              return (
+                <ProductCard
+                  key={id}
+                  title={name}
+                  productImage={imageUrl}
+                  oldPrice={oldPrice}
+                  price={price}
+                />
+              );
+            })
+          }
+
+        </S.Products>
+      </S.Container>
+
+      <BlackFridayMoldal
+        isOpen={isBlackFridayModalOpen}
+        onRequestClose={handleCloseBlackFridayModal}
+      />
+    </>
   );
 }

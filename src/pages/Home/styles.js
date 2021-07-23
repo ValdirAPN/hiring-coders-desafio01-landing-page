@@ -4,7 +4,10 @@ export const Container = styled.section`
   max-width: 1380px;
   margin: 0 auto;
   padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
 `
+
+export const Products = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+`;

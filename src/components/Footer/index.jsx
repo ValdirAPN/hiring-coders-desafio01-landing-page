@@ -2,7 +2,7 @@ import { IconContext } from 'react-icons';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa'
 
-import * as S from './styled';
+import * as S from './styles';
 
 export function Footer() {
   return (
