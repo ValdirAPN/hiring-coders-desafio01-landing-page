@@ -1,12 +1,18 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import * as S from './styles'
 
 export function Login() {
+  const history = useHistory();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
   function handleLogin(e) {
+    e.preventDefault();
+    
     localStorage.setItem('name', name);
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
@@ -14,6 +20,9 @@ export function Login() {
     setName('');
     setEmail('');
     setPassword('');
+
+    history.push('/');
+    window.location.reload();
   }
 
   return (

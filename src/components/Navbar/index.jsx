@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useCart } from '../../hooks/useCart';
@@ -13,7 +13,7 @@ import * as S from './styles'
 export function Navbar() {
   const { cartItems } = useCart();
 
-  const [user, setUser] = useState(localStorage.getItem('name'));
+  const [user, setUser] = useState('');
   const [showCart, setShowCart] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
 
@@ -31,6 +31,13 @@ export function Navbar() {
     setUser('');
     localStorage.setItem('name', '');
   }
+
+  useEffect(() => {
+    const user = localStorage.getItem('name');
+    if (user) {
+      setUser(user)
+    }
+  }, [])
   
   return (
     <S.Container>
