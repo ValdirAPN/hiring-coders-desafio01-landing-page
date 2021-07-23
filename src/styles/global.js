@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   section {
-    min-height: calc(100vh - 9rem);
+    min-height: calc(100vh - 4rem);
     margin: 0 auto;
   }
 
